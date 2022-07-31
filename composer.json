@@ -1,0 +1,43 @@
+{
+    "name": "trapstats/sms",
+    "description": "TrapStat's SMS package.",
+    "license": "MIT",
+    "homepage": "https://trapstats.com",
+    "authors": [
+        {
+            "name": "Nicholas Dykhuizen",
+            "email": "nicholas.dykhuizen@trapstats.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^9.0",
+        "illuminate/queue": "^9.0",
+        "illuminate/log": "^9.0",
+        "illuminate/support": "^9.0",
+        "psr/log": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trapstats\\Sms\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trapstats\\Sms\\SmsServiceProvider",
+                "Trapstats\\Sms\\SmsNotificationServiceProvider"
+            ],
+            "aliases": {
+                "Sms": "Trapstats\\Sms\\Facades\\Sms"
+            }
+        }
+    },
+    "suggest": {
+        "twilio/sdk": "Required to use the Twilio sms driver. (^6.37)"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
