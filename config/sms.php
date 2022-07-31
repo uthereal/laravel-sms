@@ -35,7 +35,7 @@ return [
 
     'messengers' => [
         'twilio' => [
-            'transport' => 'ses',
+            'transport' => 'twilio',
         ],
 
         'log' => [
